@@ -11360,7 +11360,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .video-container {
   position: relative;
-  width: 80%; /* Video kengligi */
+  width: 100%; /* Video kengligi */
   max-width: 800px; /* Maksimal kenglik */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soyani qo'shish */
   border-radius: 10px; /* Burchaklarni yumaloqlash */
