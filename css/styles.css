@@ -11351,22 +11351,28 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .video-section {
-  position: relative;
-  width: 100%;
-  height: 700px; /* Videoning balandligini sozlang */
-  overflow: hidden;
-  background-color: #000; /* Qora fon, agar video yuklanmasa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Orqa fon rangi */
+  padding: 0; /* Bo'sh joy qo'shish */
 }
 
-.video-container video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.video-container {
+  position: relative;
+  width: 80%; /* Video kengligi */
+  max-width: 800px; /* Maksimal kenglik */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soyani qo'shish */
+  border-radius: 10px; /* Burchaklarni yumaloqlash */
+  overflow: hidden; /* Tashqaridagi elementlarni yashirish */
+}
+
+video {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Video ekranni to‘ldiradi */
+  display: block;
 }
+
 
 
 /* .circle-image {
