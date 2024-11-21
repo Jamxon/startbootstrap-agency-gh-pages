@@ -77,19 +77,28 @@
 
     
 <!-- Video bo'limi -->
-<section class="video-section" style="margin: 0; padding: 0; overflow: hidden;">
-    <div class="video-container" style="position: relative; width: 100%; height: 100vh;">
-        <video 
-            autoplay 
-            loop 
-            controls 
-            playsinline 
-            style="width: 100%; height: 100%; object-fit: cover;">
-            <source src="assets/ish.mp4" type="video/mp4" />
-            Sizning brauzeringiz video formatini qo‘llab-quvvatlamaydi.
-        </video>
-    </div>
-</section>
+<div class="video-container">
+    <video id="video" autoplay loop controls playsinline>
+        <source src="assets/ish.mp4" type="video/mp4">
+        Sizning brauzeringiz video formatini qo‘llab-quvvatlamaydi.
+    </video>
+</div>
+
+<script>
+    // Brauzer autoplay cheklovlarini o‘tkazish uchun foydalanuvchi bilan aloqa
+    const video = document.getElementById('video');
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Brauzer autoplayni cheklasa, video ijrosini qo‘lda boshlash
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(() => {
+                // Autoplay ishlamasa, foydalanuvchi biror marta bosishi kutiladi
+                alert("Videoni boshlash uchun biror tugmani bosing.");
+            });
+        }
+    });
+</script>
 
 
 
