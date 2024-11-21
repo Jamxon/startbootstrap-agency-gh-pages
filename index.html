@@ -79,12 +79,24 @@
 <!-- Video bo'limi -->
 <section class="video-section">
     <div class="video-container">
-        <video autoplay muted loop>
+        <video autoplay loop muted id="video">
             <source src="assets/ish.mp4" type="video/mp4" />
             Sizning brauzeringiz video formatini qo‘llab-quvvatlamaydi.
         </video>
     </div>
 </section>
+
+<script>
+    // Video elementini olish
+    const video = document.getElementById('video');
+
+    // Foydalanuvchi biror marta bosgandan keyin ovozni yoqish
+    window.addEventListener('click', () => {
+        video.muted = false; // Muted atributini o‘chiradi
+        video.play(); // Videoni o‘ynatadi (agar kerak bo‘lsa)
+    });
+</script>
+
 
 
     <section class="page-section" id="about">
