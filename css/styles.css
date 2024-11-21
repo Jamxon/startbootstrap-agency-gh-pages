@@ -10987,7 +10987,7 @@ header.masthead .masthead-subheading {
 }
 
 header.masthead .masthead-heading {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 2rem;
 }
 
@@ -11385,3 +11385,28 @@ section#contact form#contactForm :-ms-input-placeholder {
   height: 100%;
   object-fit: cover;
 } */
+
+.social-links-container {
+  position: fixed;
+  bottom: 20px; /* Ekranning pastki chetidan 20px masofa */
+  right: 20px; /* O'ng chetidan 20px masofa */
+  display: flex;
+  flex-direction: column; /* Pastma-past joylashish */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Yengil fon */
+  padding: 10px;
+  border-radius: 8px; /* Burchaklarni yumaloqlash */
+}
+
+.social-links-container .nav-link {
+  margin: 5px 0; /* Havolalar orasidagi masofa */
+  font-size: 20px; /* Ikonkalar kattaligi */
+  text-decoration: none;
+  color: white; /* Matn rangi */
+  transition: transform 0.2s ease; /* Animatsiya */
+}
+
+.social-links-container .nav-link:hover {
+  transform: scale(1.2); /* Havola ustiga bosilganda kattalashish */
+  color: #00bfff; /* Hover effekti uchun rang */
+}
